@@ -3,7 +3,7 @@
     <div class="search-div">
       <el-form :inline="true" class="demo-form-inline" :model="params">
         <el-form-item label="商品名">
-          <el-input v-model="params.goodsName" size="mini" clearable maxlength="4"></el-input>
+          <el-input v-model="params.goodsName" size="mini" clearable></el-input>
         </el-form-item>
         <el-form-item label="仓库" style="margin-left: 20px">
           <el-select v-model="params.warehouse" size="mini" placeholder="" clearable>
@@ -32,17 +32,22 @@
               width="55">
           </el-table-column>
           <el-table-column
+              type="index"
+              width="55">
+          </el-table-column>
+          <el-table-column
               prop="goodsName"
               label="商品名"
-              width="180">
+              width="300">
           </el-table-column>
           <el-table-column
               prop="wareName"
               label="仓库"
-              width="180">
+              width="300">
           </el-table-column>
           <el-table-column
               prop="quantity"
+              width="300"
               label="数量">
           </el-table-column>
           <el-table-column label="操作">
